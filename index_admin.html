@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <title>ProTrack Admin</title>
+    <style>
+        * {
+            color: white;
+            font-family: DM Sans;
+        }
+
+        body {
+            background-image: url(dark-space-wallpaper-7h5brw4094b65ky5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 6vh;
+        }
+
+        .name {
+            font-size: 10vh;
+            font-family: DM Sans;
+            margin-top: 0;
+            margin-bottom: 1vh;
+        }
+
+        #container {
+            max-width: 80vh;
+            max-height: 80vh;
+            background-color: rgba(237, 237, 228, 0.151);
+            font-size: 3vh;
+            padding: 1vh;
+            border: 2px solid white;
+            border-radius: 20px;
+            padding-bottom: 5vh;
+        }
+
+        #box1 {
+            padding: 1vh;
+            color: rgb(35, 213, 244);
+        }
+
+        #box2 {
+            padding: 1vh;
+            font-size: 3vh;
+        }
+
+        a {
+            color: white;
+            border-radius: 50px;
+            font-size: large;
+            font-weight: 600;
+        }
+
+        nav {
+            position: sticky;
+        }
+
+        #nav {
+            margin: auto;
+            align-items: center;
+            max-width: 30vw;
+            height: 5vh;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 1vh;
+        }
+
+        #megabox {
+            height: 80vh;
+        }
+
+        .d2 {
+            height: 90vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2vw;
+            background-color: rgba(121, 204, 255, 0.833);
+            width: 90vw;
+            padding: 2vh;
+            margin: 5vh auto;
+            font-family: DM Sans;
+            font-size: 5vh;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 1vh;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 3vh;
+            height: 40vh;
+        }
+
+        .product-title {
+            color: black;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 70%;
+        }
+
+        footer {
+            background-color: rgba(35, 35, 35, 0.8);
+            padding: 2vh;
+            color: #ddd;
+            text-align: center;
+            margin-top: 10vh;
+            border-top: 1px solid #fff;
+        }
+
+        footer p {
+            margin: 0.5vh;
+            font-size: 2.5vh;
+        }
+
+        .footer-links {
+            margin-top: 2vh;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            margin: 0 2vh;
+            text-decoration: none;
+            font-size: 2.5vh;
+        }
+
+        .footer-links a:hover {
+            color: rgb(35, 213, 244);
+        }
+
+        footer a {
+            color: #ddd;
+        }
+
+        footer a:hover {
+            color: rgb(35, 213, 244);
+        }
+
+        #parent_container {
+            display: flex;
+        }
+
+        #employees {
+            margin: 5vh;
+            padding: 8vh;
+            width: 40vw;
+            background-color: rgba(255, 255, 255, 0.121);
+            height: 60vh;
+            border-radius: 20px;
+        }
+
+        #emp_card {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+
+        .emp_id {
+            align-content: center;
+            padding-left: 2vh;
+            font-size: 5vh;
+            color: black;
+            height: 10vh;
+            width: 40vw;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #task_assignment {
+            padding: 2vh;
+            color: black;
+            max-height: 45vh;
+            padding-top: 0px;
+        }
+
+        h2 {
+            color: rgb(35, 213, 244);
+        }
+
+        #task_assignment textarea {
+            width: 70%;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+
+        #assign_task {
+            color: black;
+        }
+
+        #emp_select {
+            color: black;
+        }
+
+        #task_description {
+            font-size: 3vh;
+        }
+
+        #task_list {
+            margin: 5vh;
+        }
+
+        .task-item {
+            color: black;
+            background-color: rgba(255, 255, 255, 0.269);
+            padding: 1vh;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 1vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-description {
+            font-size: 3vh;
+        }
+
+        .delete-btn {
+            background-color: rgb(244, 67, 54);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5vh 1vh;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: rgb(194, 39, 32);
+        }
+
+        #task_container {
+            background-color: rgba(255, 255, 255, 0.196);
+            max-height: 40vh;
+            width: 60vw;
+            margin-top: 5vh;
+            padding: 3vh;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<header>
+    <nav>
+        <div id="nav">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+            <a href="#" id="logout">Logout</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div id="parent_container">
+        <div id="megabox">
+            <h1 style="color:red;margin-bottom: 0px;">Employees Manager</h1>
+            <h1 class="name">Admin</h1>
+            <div id="container">
+                <div id="task_assignment">
+                    <h2>Assign Task to Employee</h2>
+                    <label for="emp_select">Select Employee:</label>
+                    <select id="emp_select">
+                        <option value="emp1">Employee 1</option>
+                        <option value="emp2">Employee 2</option>
+                        <option value="emp3">Employee 3</option>
+                    </select>
+                    <br><br>
+                    <label for="task_description">Task Description:</label>
+                    <textarea id="task_description" rows="4" cols="50"></textarea>
+                    <br><br>
+                    <button id="assign_task">Assign Task</button>
+                </div>
+            </div>
+        </div>
+        <div id="employees">
+            <div>
+                <p class="name">Employees</p>
+            </div>
+            <div id="emp_card">
+                <div class="emp_id">Emp_1</div>
+                <div class="emp_id">Emp_2</div>
+                <div class="emp_id">Emp_3</div>
+            </div>
+        </div>
+    </div>
+    <div id="task_container">
+        <div>
+            <p class="name">Assigned Tasks</p>
+        </div>
+        <div id="task_list">
+            <!-- Task items will be dynamically inserted here -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 ProTRACK. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <p>Follow us on:
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+    <script>
+        document.getElementById("logout").addEventListener("click", function (event) {
+            event.preventDefault();
+            const confirmLogout = confirm("Are you sure you want to log out?");
+            if (confirmLogout) {
+                window.location.href = "index.html";
+            }
+        });
+
+        document.getElementById("assign_task").addEventListener("click", function () {
+            const empSelect = document.getElementById("emp_select").value;
+            const taskDescription = document.getElementById("task_description").value;
+
+            if (taskDescription.trim() === "") {
+                alert("Please enter a task description.");
+                return;
+            }
+
+            // Store task in localStorage
+            localStorage.setItem(empSelect, JSON.stringify({ description: taskDescription }));
+
+            alert("Task assigned successfully!");
+            document.getElementById("task_description").value = ""; // Clear the textarea
+
+            // Update the task list
+            updateTaskList();
+        });
+
+        function updateTaskList() {
+            const taskListElement = document.getElementById("task_list");
+            taskListElement.innerHTML = ""; // Clear existing tasks
+
+            // Get all tasks from localStorage
+            Object.keys(localStorage).forEach(key => {
+                const task = JSON.parse(localStorage.getItem(key));
+                const taskItem = document.createElement("div");
+                taskItem.className = "task-item";
+
+                const taskDescription = document.createElement("div");
+                taskDescription.className = "task-description";
+                taskDescription.textContent = task.description;
+
+                const deleteButton = document.createElement("button");
+                deleteButton.className = "delete-btn";
+                deleteButton.textContent = "Delete";
+                deleteButton.onclick = function () {
+                    deleteTask(key);
+                };
+
+                taskItem.appendChild(taskDescription);
+                taskItem.appendChild(deleteButton);
+
+                taskListElement.appendChild(taskItem);
+            });
+        }
+
+        function deleteTask(taskId) {
+            if (confirm("Are you sure you want to delete this task?")) {
+                // Remove task from localStorage
+                localStorage.removeItem(taskId);
+
+                // Update the task list
+                updateTaskList();
+
+                console.log(`Task ${taskId} deleted.`);
+            }
+        }
+
+        // Initial update of task list
+        updateTaskList();
+    </script>
+</body>
+
+</html>

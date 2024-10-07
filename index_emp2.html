@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <title>ProTRACK Emp_2</title>
+    <style>
+        * {
+            color: white;
+            font-family: DM Sans;
+        }
+
+        body {
+            background-image: url(dark-space-wallpaper-7h5brw4094b65ky5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 6vh;
+        }
+
+        .name {
+            font-size: 10vh;
+            font-family: DM Sans;
+            margin-top: 0;
+        }
+
+        #container {
+            width: 80vh;
+            height: 40vh;
+            background-color: rgba(237, 237, 228, 0.151);
+            font-size: 4vh;
+            padding: 1vh;
+            border: 2px solid white;
+            border-radius: 20px;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+        }
+
+        #box1 {
+            padding: 1vh;
+            color: rgb(35, 213, 244);
+        }
+
+        #box2 {
+            padding: 1vh;
+            font-size: 3vh;
+        }
+
+        a {
+            color: white;
+            border-radius: 50px;
+            font-size: large;
+            font-weight: 600;
+
+        }
+
+        nav {
+            position: sticky;
+        }
+
+        #nav {
+            margin: auto;
+            align-items: center;
+            max-width: 30vw;
+            height: 5vh;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 1vh;
+
+        }
+
+        #megabox {
+            /* display: flex; */
+            height: 80vh;
+        }
+
+        .d2 {
+            height: 90vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2vw;
+            background-color: rgba(121, 204, 255, 0.833);
+            width: 90vw;
+            padding: 2vh;
+            margin: 5vh auto;
+            font-family: DM Sans;
+            font-size: 5vh;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 1vh;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 3vh;
+            height: 40vh;
+        }
+
+        .product-title {
+            color: black;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 70%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(35, 35, 35, 0.8);
+            /* Semi-transparent dark background */
+            padding: 2vh;
+            color: #ddd;
+            /* Light text color to contrast the dark background */
+            text-align: center;
+            margin-top: 10vh;
+            border-top: 1px solid #fff;
+            /* White border to separate footer */
+        }
+
+        footer p {
+            margin: 0.5vh;
+            font-size: 2.5vh;
+        }
+
+        .footer-links {
+            margin-top: 2vh;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            /* Light color for links */
+            margin: 0 2vh;
+            text-decoration: none;
+            font-size: 2.5vh;
+        }
+
+        .footer-links a:hover {
+            color: rgb(35, 213, 244);
+            /* Bright blue hover effect */
+        }
+
+        footer a {
+            color: #ddd;
+        }
+
+        footer a:hover {
+            color: rgb(35, 213, 244);
+            /* Hover effect to match other links */
+        }
+        a:hover {
+            color: rgb(35, 213, 244);
+            /* Hover effect to match other links */
+        }
+
+        #parent_container {
+            display: flex;
+        }
+
+        #employees {
+            margin: 5vh;
+            padding: 8vh;
+            width: 40vw;
+            background-color: rgba(255, 255, 255, 0.121);
+            border-radius: 10px;
+        }
+
+        #emp_card {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+
+        .emp_id {
+            align-content: center;
+            padding-left: 2vh;
+            font-size: 5vh;
+            color: black;
+            height: 10vh;
+            width: 40vw;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #employees {
+            margin: 5vh;
+            padding: 8vh;
+            width: 40vw;
+            background-color: rgba(255, 255, 255, 0.121);
+        }
+
+        #emp_card {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+
+        .emp_id {
+            align-items: center;
+            align-content: center;
+            padding-left: 2vh;
+            font-size: 5vh;
+            color: black;
+            height: 10vh;
+            width: 40vw;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input {
+            margin: 1vh;
+            color: black;
+            align-items: center;
+            height: 5vh;
+            width: 20vh;
+            font-size: 4vh;
+        }
+    </style>
+</head>
+<header>
+    <nav>
+        <div id="nav">
+            <a href="index.html">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+            <a href="#" id="logout">Logout</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div id="parent_container">
+        <div id="megabox">
+            <h1 style="color:red;margin-bottom: 0px;">Employees Manager</h1>
+            <h1 class="name">EMPLOYEE_2</h1>
+            <div id="container">
+                <div id="box1">Task</div>
+                <div id="box2">
+                </div>
+            </div>
+        </div>
+        <div id="employees">
+            <div>
+                <p class="name" style="color:rgb(35, 213, 244)">Deadline - </p>
+            </div>
+            <div id="emp_card">
+                <div class="emp_id">Task completed percentage <span><input type="text"></span></div>
+                <div class="emp_id">Time Needed <span><input type="text"></span></div>
+                <div class="emp_id">Problem occured <span><input type="text"></span></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 ProTRACK. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <p>Follow us on:
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+    <script>
+        document.getElementById("logout").addEventListener("click", function (event) {
+            event.preventDefault();
+            const confirmLogout = confirm("Are you sure you want to log out?");
+            if (confirmLogout) {
+                window.location.href = "index.html";
+            }
+        });
+
+        window.onload = function () {
+            const empId = "emp2"; // This should be dynamic based on logged-in employee
+            const taskDescription = localStorage.getItem(empId);
+
+            const taskDescriptionElement = document.getElementById("box2");
+
+            if (taskDescription) {
+                taskDescriptionElement.textContent = taskDescription;
+            } else {
+                taskDescriptionElement.textContent = "No tasks assigned.";
+            }
+        }
+    </script>
+</body>
+
+</html>
